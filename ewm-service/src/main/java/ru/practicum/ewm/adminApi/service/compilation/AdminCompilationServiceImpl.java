@@ -35,6 +35,7 @@ public class AdminCompilationServiceImpl implements AdminCompilationService {
         this.eventRepository = eventRepository;
         this.compilationMapper = compilationMapper;
     }
+
     @Transactional
     @Override
     public CompilationDto save(NewCompilationDto newCompilationDto) {
