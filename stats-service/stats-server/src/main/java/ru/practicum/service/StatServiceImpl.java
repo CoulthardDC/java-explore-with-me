@@ -11,7 +11,7 @@ import ru.practicum.model.Stat;
 import java.net.URI;
 import java.time.LocalDateTime;
 import java.util.Collection;
-import java.util.Set;
+import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
@@ -33,32 +33,32 @@ public class StatServiceImpl implements StatService {
     }
 
     @Override
-    public Set<StatShortDto> getStats(LocalDateTime start, LocalDateTime end, Collection<URI> uris, Boolean unique) {
-        Set<StatShortDto> result;
+    public List<StatShortDto> getStats(LocalDateTime start, LocalDateTime end, Collection<URI> uris, Boolean unique) {
+        List<StatShortDto> result;
 
         if (uris != null) {
             if (unique) {
                 result = statRepository.findByUriInAndDistinctIpAndTimestampBetween(uris, start, end)
                         .stream()
                         .map(statMapper::toStatShortDto)
-                        .collect(Collectors.toSet());
+                        .collect(Collectors.toList());
             } else {
                 result = statRepository.findByUriInAndTimestampBetween(uris, start, end)
                         .stream()
                         .map(statMapper::toStatShortDto)
-                        .collect(Collectors.toSet());
+                        .collect(Collectors.toList());
             }
         } else {
             if (unique) {
                 result = statRepository.findByDistinctIpAndTimestampBetween(start, end)
                         .stream()
                         .map(statMapper::toStatShortDto)
-                        .collect(Collectors.toSet());
+                        .collect(Collectors.toList());
             } else {
                 result = statRepository.findByTimestampBetween(start, end)
                         .stream()
                         .map(statMapper::toStatShortDto)
-                        .collect(Collectors.toSet());
+                        .collect(Collectors.toList());
             }
         }
 
