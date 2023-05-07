@@ -2,7 +2,6 @@ package ru.practicum.ewm.privateApi.service.comment;
 
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import ru.practicum.ewm.adminApi.service.user.AdminUserService;
 import ru.practicum.ewm.base.dto.comment.CommentDto;
 import ru.practicum.ewm.base.dto.comment.NewCommentDto;
 import ru.practicum.ewm.base.enums.State;
@@ -46,7 +45,7 @@ public class PrivateCommentServiceImpl implements PrivateCommentService {
     @Override
     public CommentDto create(Long userId, Long eventId, NewCommentDto newCommentDto) {
         User user = getUserOrElseThrow(userRepository.findById(userId));
-        Event event =getEventOrElseThrow(eventRepository.findById(eventId));
+        Event event = getEventOrElseThrow(eventRepository.findById(eventId));
 
         if (!event.getState().equals(State.PUBLISHED)) {
             throw new ConflictException("Создавать комментарии можно только к опубликованным событиям.");

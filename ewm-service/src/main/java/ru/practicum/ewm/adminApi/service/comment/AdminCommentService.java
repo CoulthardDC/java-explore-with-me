@@ -1,6 +1,5 @@
 package ru.practicum.ewm.adminApi.service.comment;
 
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import ru.practicum.ewm.base.dto.comment.CommentDto;
 

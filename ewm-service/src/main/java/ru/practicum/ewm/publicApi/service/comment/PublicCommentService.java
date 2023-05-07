@@ -6,7 +6,7 @@ import ru.practicum.ewm.base.dto.comment.CommentDto;
 import java.util.List;
 
 public interface PublicCommentService {
-    List<CommentDto> getComments (Long eventId, Pageable pageable);
+    List<CommentDto> getComments(Long eventId, Pageable pageable);
 
-    CommentDto getComment (Long commentId);
+    CommentDto getComment(Long commentId);
 }

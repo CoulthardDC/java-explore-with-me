@@ -1,7 +1,6 @@
 package ru.practicum.ewm.adminApi.service.comment;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import ru.practicum.ewm.base.dto.comment.CommentDto;

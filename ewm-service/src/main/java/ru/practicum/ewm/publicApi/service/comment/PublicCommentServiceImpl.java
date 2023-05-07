@@ -45,7 +45,7 @@ public class PublicCommentServiceImpl implements PublicCommentService {
         Comment comment = commentRepository.findById(commentId).orElseThrow(
                 () -> new NotFoundException("Комментарий не найден")
         );
-        return commentMapper.toCommentDto(comment   );
+        return commentMapper.toCommentDto(comment);
     }
 
     private User getUserOrElseThrow(Optional<User> optionalUser) {

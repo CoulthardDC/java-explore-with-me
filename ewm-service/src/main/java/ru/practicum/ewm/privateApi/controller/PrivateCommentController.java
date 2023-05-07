@@ -6,14 +6,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import ru.practicum.ewm.base.dto.comment.CommentDto;
 import ru.practicum.ewm.base.dto.comment.NewCommentDto;
 import ru.practicum.ewm.privateApi.service.comment.PrivateCommentService;
 
 import javax.validation.Valid;
 import javax.validation.constraints.Positive;
 import javax.validation.constraints.PositiveOrZero;
-import java.util.List;
 
 @RestController
 @RequestMapping("/users/{userId}/comments")
