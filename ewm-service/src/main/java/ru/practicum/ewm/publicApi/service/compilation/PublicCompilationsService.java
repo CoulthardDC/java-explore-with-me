@@ -1,6 +1,6 @@
 package ru.practicum.ewm.publicApi.service.compilation;
 
-import ru.practicum.ewm.base.dto.Compilation.CompilationDto;
+import ru.practicum.ewm.base.dto.compilation.CompilationDto;
 
 import java.util.List;
 

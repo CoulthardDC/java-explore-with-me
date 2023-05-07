@@ -3,7 +3,7 @@ package ru.practicum.ewm.base.dto.event;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import ru.practicum.ewm.base.dto.Category.CategoryDto;
+import ru.practicum.ewm.base.dto.category.CategoryDto;
 import ru.practicum.ewm.base.dto.location.LocationDto;
 import ru.practicum.ewm.base.dto.user.UserShortDto;
 import ru.practicum.ewm.base.enums.State;

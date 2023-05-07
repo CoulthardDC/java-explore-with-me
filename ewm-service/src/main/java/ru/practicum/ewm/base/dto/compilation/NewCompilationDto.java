@@ -1,21 +1,21 @@
-package ru.practicum.ewm.base.dto.Compilation;
+package ru.practicum.ewm.base.dto.compilation;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import ru.practicum.ewm.base.util.notblanknull.NotBlankNull;
 
+import javax.validation.constraints.NotBlank;
 import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Builder
-public class UpdateCompilationRequest {
+public class NewCompilationDto {
     Set<Long> events;
 
     Boolean pinned;
 
-    @NotBlankNull
+    @NotBlank
     String title;
 
     public Set<Long> getEvents() {
@@ -44,7 +44,7 @@ public class UpdateCompilationRequest {
 
     @Override
     public String toString() {
-        return "UpdateCompilationRequest{" +
+        return "NewCompilationDto{" +
                 "events=" + events +
                 ", pinned=" + pinned +
                 ", title='" + title + '\'' +
