@@ -6,8 +6,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.practicum.ewm.adminApi.service.compilation.AdminCompilationService;
-import ru.practicum.ewm.base.dto.Compilation.NewCompilationDto;
-import ru.practicum.ewm.base.dto.Compilation.UpdateCompilationRequest;
+import ru.practicum.ewm.base.dto.compilation.NewCompilationDto;
+import ru.practicum.ewm.base.dto.compilation.UpdateCompilationRequest;
 
 import javax.validation.Valid;
 

@@ -2,9 +2,9 @@ package ru.practicum.ewm.base.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import ru.practicum.ewm.base.dto.Compilation.CompilationDto;
-import ru.practicum.ewm.base.dto.Compilation.NewCompilationDto;
-import ru.practicum.ewm.base.dto.Compilation.UpdateCompilationRequest;
+import ru.practicum.ewm.base.dto.compilation.CompilationDto;
+import ru.practicum.ewm.base.dto.compilation.NewCompilationDto;
+import ru.practicum.ewm.base.dto.compilation.UpdateCompilationRequest;
 import ru.practicum.ewm.base.model.Compilation;
 
 @Mapper(componentModel = "spring", uses = {EventMapper.class})

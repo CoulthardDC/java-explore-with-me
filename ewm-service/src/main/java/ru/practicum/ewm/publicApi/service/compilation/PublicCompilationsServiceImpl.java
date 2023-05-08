@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.practicum.ewm.base.mapper.CompilationMapper;
 import ru.practicum.ewm.base.repository.CompilationRepository;
-import ru.practicum.ewm.base.dto.Compilation.CompilationDto;
+import ru.practicum.ewm.base.dto.compilation.CompilationDto;
 import ru.practicum.ewm.base.exception.NotFoundException;
 import ru.practicum.ewm.base.model.Compilation;
 import ru.practicum.ewm.base.util.page.MyPageRequest;
